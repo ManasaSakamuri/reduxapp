@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from "@reduxjs/toolkit"; 
+import {Provider} from 'react-redux';
+
+const store = congigureStore({
+  reducer: {}
+})
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider Store={store}>
     <App />
+    </React.StrictMode>
   </React.StrictMode>,
   document.getElementById('root')
 );
